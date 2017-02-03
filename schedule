@@ -1,0 +1,25 @@
+var joshLessons = new Object();
+joshLessons.monday = ["Maths", "English", "PE"];
+joshLessons.tuesday = ["Technology", "RE", "Science"];
+
+
+var schedule = function(day) {
+    var day = prompt("What day do you want to know the schedule for?")
+    for (var i in joshLessons) {
+        if (day === "monday") {
+            for (x = 0; x < joshLessons.monday.length - 1; x++) {
+                console.log(joshLessons.monday[x] + " and ");
+            }
+                var finalLength = joshLessons.monday.length - 1;
+                console.log(joshLessons.monday[finalLength]);
+            
+        } else if (day === "tuesday") {
+    	    console.log(joshLessons.tuesday);
+        } else {
+    	    console.log("Don't know");
+        }
+    }
+}
+
+
+schedule(day)
